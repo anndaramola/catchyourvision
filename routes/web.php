@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/registration/{id}', function ($id) {
         $registration = App\Models\Registration::find($id);
         return new App\Mail\RegistrationReceived($registration);
-    })->name('login');
+    })->name('checkregister');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
