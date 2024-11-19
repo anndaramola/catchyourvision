@@ -1,12 +1,17 @@
-name: Publish
+name: Deploy
 
 on:
   workflow_dispatch:
     inputs:
       environment:
         required: false
-        description: 'Environment (default: production)'
-        default: 'production'
+        description: 'Environment (default: develop)'
+        default: 'develop'
+  workflow_run:
+    workflows: ["Integrate"]
+    branches: [develop]
+    types:
+      - completed
 
 jobs:
   setup:
