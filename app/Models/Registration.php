@@ -2,14 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Pariwo\Resources\Models\ResourceModel;
 
 class Registration extends ResourceModel
 {
-    public static function booted(): void
+    public function event(): BelongsTo
     {
-        static::created(function ($model) {
-
-        });
+        return $this->belongsTo(Event::class);
     }
 }

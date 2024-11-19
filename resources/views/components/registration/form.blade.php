@@ -106,7 +106,7 @@
                 </div>
             </div>
             <div>
-                <x-buttons.register-button type="submit" x-bind:disabled="event_id == 0"/>
+                <x-buttons.register-button type="submit" x-bind:disabled="event_id == 0" data-pan="registration-button-form"/>
             </div>
         </div>
     </form>

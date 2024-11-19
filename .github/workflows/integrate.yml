@@ -1,0 +1,92 @@
+name: Integrate
+
+on:
+  push:
+    branches:
+      - develop
+
+  pull_request:
+    types: [opened]
+    branches: [develop, main]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      environment: ${{ steps.get.outputs.env }}
+    steps:
+      - name: Set Environment
+        if: github.event_name == 'workflow_run'
+        run: |
+          [[ "${{ github.ref }}" == "refs/heads/main" ]] && echo "DEPLOY_ENV=PROD" >> $GITHUB_ENV || ([[ "${{ github.ref }}" == *"release/"* ]] && echo "DEPLOY_ENV=QA" >> $GITHUB_ENV || echo "DEPLOY_ENV=DEV" >> $GITHUB_ENV)
+
+      - name: Get Environment
+        id: get
+        run: |
+          echo "env=${{ env.DEPLOY_ENV }}" >> "$GITHUB_OUTPUT"
+
+#  test:
+#    runs-on: ubuntu-latest
+#    needs: setup
+#
+#    services:
+#      database:
+#        image: postgres
+#        env:
+#          POSTGRES_PASSWORD: postgres
+#        ports:
+#          - 5432
+#        options: >-
+#          --health-cmd pg_isready
+#          --health-interval 10s
+#          --health-timeout 5s
+#          --health-retries 5
+#
+#    steps:
+#      - uses: actions/checkout@v4
+#      - name: Copy .env
+#        run: php -r "file_exists('.env') || copy('.env.ci', '.env');"
+
+#      - name: Add Composer Authentication
+#        run: touch ~/.composer/auth.json; echo "${{ secrets.COMPOSER_AUTH }}" | base64 --decode | jq > ~/.composer/auth.json; cat ~/.composer/auth.json;
+#
+#      - name: Setup PHP
+#        uses: shivammathur/setup-php@v2
+#        with:
+#          php-version: 8.3
+#
+#      - name: Install Dependencies
+#        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --ignore-platform-reqs
+#
+#      - name: Get PHP Version
+#        run: php --version
+#
+#      - name: Generate Key
+#        run: php artisan key:generate
+#
+#      - name: Setup Passport Keys
+#        run: php artisan passport:keys
+#
+#      - name: Directory Permissions
+#        run: chmod -R 777 storage bootstrap/cache
+#
+#      - name: Run Migrations
+#        env:
+#          DB_PORT: ${{ job.services.database.ports[5432] }}
+#        run: cp .env.ci .env.testing && php artisan migrate
+#
+#      - name: Compile Assets
+#        uses: actions/setup-node@v4
+#      - run: npm ci
+#      - run: npm run build --if-present
+
+#      - name: Execute Tests (Unit and Feature) via PHPUnit
+#        env:
+#          DB_PORT: ${{ job.services.database.ports[5432] }}
+#          APP_URL: "http://127.0.0.1:8000"
+#          DB_CONNECTION: pgsql
+#          DB_DATABASE: postgres
+#          DB_PASSWORD: postgres
+#          APP_ENV: testing
+#        run: php artisan test --env=testing
+

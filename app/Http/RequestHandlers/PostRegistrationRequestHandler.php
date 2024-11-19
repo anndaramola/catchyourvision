@@ -2,6 +2,7 @@
 
 namespace App\Http\RequestHandlers;
 
+use App\Events\EventRegistrationReceived;
 use App\Models\Registration;
 use Pariwo\Resources\Http\RequestHandlers\RequestHandler;
 
@@ -40,5 +41,7 @@ class PostRegistrationRequestHandler extends RequestHandler
         $registration->email_address = $this->request->email;
         $registration->event_id = $this->request->event;
         $registration->save();
+
+        event(new EventRegistrationReceived($registration));
     }
 }

@@ -6,7 +6,7 @@
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
-            <x-buttons.register-button />
+            <x-buttons.register-button data-pan="registration-button-error"/>
         @endif
         <section class="md:mx-auto min-h-[90vh] md:flex md:items-center md:justify-center">
             <div class="w-full max-w-[800px] md:px-10 pt-5 mx-auto flex flex-col h-full md:justify-center md:items-center">
@@ -22,7 +22,7 @@
                         <li>Saturday, December 14, 2024</li>
                         <li>Saturday, December 28, 2024</li>
                     </ul>
-                    <x-buttons.register-button />
+                    <x-buttons.register-button data-pan="registration-button-hero"/>
                 </div>
             </div>
         </section>
@@ -32,7 +32,7 @@
                 <p>But, here at KABUVU, we know the power of community. So we created these workshops to make the visioning process a dynamic, community-based experience.</p>
                 <p>For an hour and half, you get to let your imagination run wild and free, without judgement, and with a group of people cheering you on.</p>
                 <span class="block py-5">
-                    <x-buttons.register-button />
+                    <x-buttons.register-button data-pan="registration-button-why"/>
                 </span>
             </div>
 
@@ -48,7 +48,7 @@
                 <p>You’ll also leave with a draft of your vision that you can turn into a vision board, a plan, or anything you need to see it come to pass.</p>
                 <p>Above all, this workshop is a powerful way to jumpstart any resolution you have for 2025.</p>
                 <span class="block py-5">
-                    <x-buttons.register-button />
+                    <x-buttons.register-button data-pan="registration-button-what"/>
                 </span>
             </div>
 

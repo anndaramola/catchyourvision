@@ -1,4 +1,4 @@
-    {!! \Illuminate\Support\Str::markdown("# Terms of Purchase
+    {!! \Illuminate\Support\Str::markdown("# Terms
 By submitting your registration, and purchasing the ticket(s), you agree to be bound by this Terms of Purchase (the “Terms”) as outlined by Gainful, LLC, d.b.a., Kabuvu ('Kabuvu') for Catch Your Vision (the “Event”).
 
 ## Cancellation and Refund
