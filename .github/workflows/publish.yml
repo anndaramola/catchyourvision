@@ -108,7 +108,7 @@ jobs:
 
       - name: Refresh Services
         run: |
-          ssh deploy 'sudo supervisorctl stop neno:* && sudo supervisorctl start neno:*'
+          ssh deploy 'sudo supervisorctl stop catchyourvision:* && sudo supervisorctl start catchyourvision:*'
 
       - name: Cleanup Build
         run: |
