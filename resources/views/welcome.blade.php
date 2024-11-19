@@ -11,7 +11,7 @@
         <section class="md:mx-auto min-h-[90vh] md:flex md:items-center md:justify-center">
             <div class="w-full max-w-[800px] md:px-10 pt-5 mx-auto flex flex-col h-full md:justify-center md:items-center">
                 <a href="{{ route('home') }}" class="w-full mx-auto max-w-[400px] block">
-                    <img src="{{ url('/assets/images/logofullwide.png') }}" alt="Catch Your Vision" />
+                    <img src="{{ url('/assets/images/logo.png') }}" alt="Catch Your Vision" />
                 </a>
                 <div class="my-4 w-full sm:w-3/5 md:w-4/5 sm:mx-auto">
                     <h2 class="text-3xl sm:text-5xl font-serif mt-4 mb-8">Experience a future of your own making.</h2>
@@ -61,7 +61,7 @@
 
         <x-registration.form />
         <a href="{{ route('home') }}" class="w-full py-10 mx-auto max-w-[400px] block">
-            <img src="{{ url('/assets/images/logofullwide.png') }}" alt="Catch Your Vision" />
+            <img src="{{ url('/assets/images/logo.png') }}" alt="Catch Your Vision" />
         </a>
     </div>
 

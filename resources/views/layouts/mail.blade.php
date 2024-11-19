@@ -327,7 +327,7 @@
                         <td class="header">
 {{--                            {{ $header ?? config('app.name', 'Catch Your Vision') }}--}}
                             <a href="/">
-                                <img src="{{ url('/assets/images/logofullwide.png') }}" alt="Catch Your Vision" />
+                                <img src="{{ url('/assets/images/logo.png') }}" alt="Catch Your Vision" />
                             </a>
                         </td>
                     </tr>
