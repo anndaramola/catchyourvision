@@ -80,7 +80,8 @@
             font-size: 28px
         }
 
-        .header a {
+        .header a,
+        .header img {
             display: block;
             margin: 0 auto;
             width: 300px;
@@ -326,7 +327,7 @@
                         <td class="header">
 {{--                            {{ $header ?? config('app.name', 'Catch Your Vision') }}--}}
                             <a href="/">
-                                <x-application-logo class="logo" />
+                                <img src="{{ url('/assets/images/logofullwide.png') }}" alt="Catch Your Vision" />
                             </a>
                         </td>
                     </tr>
