@@ -105,10 +105,10 @@ jobs:
           ssh deploy 'sudo -u www-data php ${{ secrets[format('{0}_PROJECT_DIR', needs.setup.outputs.environment)] }}/web/artisan config:cache'
           ssh deploy 'sudo -u www-data php ${{ secrets[format('{0}_PROJECT_DIR', needs.setup.outputs.environment)] }}/web/artisan storage:link'
 
-      - name: Refresh Services
-        run: |
-          ssh deploy 'sudo supervisorctl stop catchyourvision:* && sudo supervisorctl start catchyourvision:*'
-
+#      - name: Refresh Services
+#        run: |
+#          ssh deploy 'sudo supervisorctl stop catchyourvision:* && sudo supervisorctl start catchyourvision:*'
+#
       - name: Cleanup Build
         run: |
           ssh deploy 'sudo rm -r build.tar.gz'
