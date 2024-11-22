@@ -3,7 +3,7 @@
     <form class="w-full md:max-w-[500px] mx-auto pb-10 space-y-5" action="{{ route('registration') }}" method="post">
         @csrf
         <h3 class="w-full text-center uppercase text-sm text-stone-500 pt-2">Choose a date</h3>
-        <div class="flex justify-between w-full text-base overflow-x-auto space-x-3 py-3">
+        <div class="flex justify-center w-full text-base overflow-x-auto space-x-3 py-3">
             <x-events.date.container
                 event_id="1"
                 weekday="Sat"
@@ -16,20 +16,6 @@
                 weekday="Sun"
                 month="Dec"
                 date="08"
-                year="24"
-            />
-            <x-events.date.container
-                event_id="3"
-                weekday="Sat"
-                month="Dec"
-                date="14"
-                year="24"
-            />
-            <x-events.date.container
-                event_id="4"
-                weekday="Sun"
-                month="Dec"
-                date="15"
                 year="24"
             />
             <x-events.date.container

@@ -19,7 +19,6 @@
                     <ul class="mx-2 my-10 md:m-10 space-y-1 md:space-y-2 text-lg md:text-2xl [&_li]:font-bold [&_li]:text-orange-700/80">
                         <li>Saturday, December 7, 2024</li>
                         <li>Sunday, December 8, 2024</li>
-                        <li>Saturday, December 14, 2024</li>
                         <li>Saturday, December 28, 2024</li>
                     </ul>
                     <x-buttons.register-button data-pan="registration-button-hero"/>
