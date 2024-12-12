@@ -31,7 +31,7 @@
     </div>
     @if(count($events) > 0)
         <div id="register" class="w-full min-h-screen flex flex-col items-center">
-            <div class="pt-20 w-1/3 mx-auto space-y-3">
+            <div class="pt-10 px-5 md:pt-20 w-full md:w-1/3 mx-auto space-y-3">
                 <h2 class="text-2xl font-serif">A workshop designed to bring your future closer.</h2>
                 <p>You’ll leave the workshop with a sense of direction, clarity, and hopefully some new friends.</p>
                 <p>You’ll also leave with a draft of your vision that you can turn into a vision board, a plan, or anything you need to see it come to pass.</p>
