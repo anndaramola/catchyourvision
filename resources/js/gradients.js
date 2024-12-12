@@ -1,0 +1,5 @@
+export const gradients = {
+    mesh1: 'radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%), radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%), radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%), radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%)',
+    mesh2: 'radial-gradient(at 21% 25%, hsla(244,89%,75%,1) 0px, transparent 50%), radial-gradient(at 51% 28%, hsla(18,92%,78%,1) 0px, transparent 50%), radial-gradient(at 13% 64%, hsla(32,92%,79%,1) 0px, transparent 50%), radial-gradient(at 74% 93%, hsla(288,97%,63%,1) 0px, transparent 50%), radial-gradient(at 91% 57%, hsla(2,91%,75%,1) 0px, transparent 50%), radial-gradient(at 39% 67%, hsla(233,74%,76%,1) 0px, transparent 50%), radial-gradient(at 22% 67%, hsla(293,70%,65%,1) 0px, transparent 50%)',
+    mesh3: '',
+}

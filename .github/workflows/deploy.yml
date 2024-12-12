@@ -48,7 +48,7 @@ jobs:
           ENV_FILE: ${{ secrets[format('{0}_ENV_FILE', needs.setup.outputs.environment)] }}
         run: |
           echo $ENV_FILE | base64 --decode > .env
-          echo "BUILD=${{ github.sha }}" >> .env
+          echo -e "BUILD=${{ github.sha }}" >> .env
 
       - name: Add Composer Authentication
         run: touch ~/.composer/auth.json; echo "${{ secrets.COMPOSER_AUTH }}" | base64 --decode | jq > ~/.composer/auth.json; cat ~/.composer/auth.json;

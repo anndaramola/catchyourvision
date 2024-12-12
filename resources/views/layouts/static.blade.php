@@ -38,13 +38,7 @@
 </head>
 <body class="font-sans text-gray-900 antialiased">
 <div class="relative bg-[#f9f7f7]">
-    <div class="min-h-screen bg-[#f9f7f7] dark:bg-neutral-950 pt-3 md:pt-10 mx-3 md:mx-auto">
         {{ $slot }}
-    </div>
-
-    <div class="w-full bg-[#f9f7f7] ">
-        <x-application-footer class="fill-current text-gray-500" />
-    </div>
 </div>
 </body>
 </html>

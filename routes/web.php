@@ -4,12 +4,17 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $events = \App\Models\Event::all()->map(function ($event) {
+        return [
+            'id' => $event->id,
+            'day' => \Carbon\Carbon::parse($event->start_date)->format('D'),
+            'date' => \Carbon\Carbon::parse($event->start_date)->format('d'),
+            'month' => \Carbon\Carbon::parse($event->start_date)->format('M'),
+            'year' => \Carbon\Carbon::parse($event->start_date)->format('y'),
+        ];
+    })->toArray();
+    return view('landing', ['events' => $events]);
 })->name('home');
-
-Route::get('/home', function () {
-    return view('welcome');
-})->name('login');
 
 Route::get('/terms', function () {
     return view('terms');

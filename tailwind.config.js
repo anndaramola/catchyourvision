@@ -1,5 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
+import {gradients} from './resources/js/gradients.js';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,6 +15,10 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+            },
+            backgroundImage: {
+                mesh1: gradients.mesh1,
+                mesh2: gradients.mesh2,
             },
         },
     },
