@@ -1,6 +1,6 @@
 @props([ 'events' => [], ])
 <section id="register" class="py-10 mb-5 mx-auto text-2xl space-y-3 border-t-[1px] border-t-indigo-100" x-data="{event_id: 0, terms:false}">
-    <h2 class="w-full text-center text-3xl">Register for Catch Your Vision 2024</h2>
+    <h2 class="w-full text-center text-3xl">Register for Catch Your Vision 2025</h2>
     <form class="w-full md:max-w-[500px] mx-auto pb-10 space-y-5" action="{{ route('registration') }}" method="post">
         @csrf
         <h3 class="w-full text-center uppercase text-sm text-stone-500 pt-2">Choose a date</h3>
